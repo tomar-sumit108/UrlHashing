@@ -16,7 +16,7 @@ public class UrlModel {
 	@Column(name = "id", nullable = false)
 	private int id;
 	
-	@Column(name = "largeUrl");
+	@Column(name = "largeUrl")
 	private String largeUrl;
 	
 	@Column(name = "shortUrl")
