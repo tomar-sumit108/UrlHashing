@@ -8,7 +8,7 @@ import com.example.UrlHashing.dto.SaveUrlResponse;
 
 public interface UrlService {
 	
-	public SaveUrlResponse saveUrl(SaveUrlRequest saveUrlRequest);
+	public SaveUrlResponse saveUrl(SaveUrlRequest saveUrlRequest) throws Exception;
 
 	public GetUrlResponse getLargeUrl(GetUrlRequest request);
 }
