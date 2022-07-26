@@ -26,7 +26,7 @@ import com.example.UrlHashing.service.UrlService;
 public class UrlController {
 	public static final String API_ENDPOINT = "/v1";
 	public static final String SAVE_URL_API = "/save";
-	public static final String GET_URL_API = "{shortUrl}";
+	public static final String GET_URL_API = "/{shortUrl}";
 	
 	@Autowired
 	private UrlService urlService;
@@ -60,7 +60,7 @@ public class UrlController {
 			return ResponseEntity.notFound().build();
 			
 		} catch(Exception e) {
-			e.printStackTrace()
+			e.printStackTrace();
 			return ResponseEntity.badRequest().build();
 		}
 		

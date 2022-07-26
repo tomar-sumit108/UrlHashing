@@ -7,11 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
-
 @Entity
 @Table(name = "shorturls")
-@Data
 public class UrlModel {
 	
 	@Id
@@ -21,5 +18,26 @@ public class UrlModel {
 	
 	@Column(name = "largeUrl", nullable = false)
 	private String largeUrl;
+	
+	public UrlModel() {
+		
+	}
+	
+	public UrlModel(String largeUrl) {
+		this.largeUrl = largeUrl;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public void setLargeUrl(String url) {
+		this.largeUrl = url;
+	}
+	
+	public String getLargeUrl() {
+		return largeUrl;
+	}
+	
 	
 }

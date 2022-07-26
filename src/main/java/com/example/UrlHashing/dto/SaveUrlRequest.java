@@ -2,22 +2,21 @@ package com.example.UrlHashing.dto;
 
 public class SaveUrlRequest {
 	
-	private String largeUrl;
+	private String url;
 	
 	public SaveUrlRequest(){
 		
 	}
 	
-	public SaveUrlRequest(String largeUrl){
-		this.largeUrl = largeUrl;
+	public SaveUrlRequest(String url) {
+		this.url = url;
 	}
 	
-	public String getLargeUrl() {
-		return largeUrl;
+	public String getUrl() {
+		return url;
 	}
 	
-	public void putLargeUrl(String largeUrl) {
-		this.largeUrl = largeUrl;
+	public void setUrl(String url) {
+		this.url = url;
 	}
-
 }
