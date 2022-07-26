@@ -5,7 +5,7 @@ REST Api using SpringBoot and MySQL that returns a shortened version of given UR
 # Getting Started
 ## Build
 ```
-git clone https://github.com/zeeshaanahmad/UrlHashing.git
+git clone https://github.com/tomar-sumit108/UrlHashing.git
 cd UrlHashing
 gradle clean build
 
