@@ -1,0 +1,33 @@
+version: "3"
+services:
+  api-server:
+    container_name: urlhashing
+    build:
+      context: .
+      dockerfile: spring.Dockerfile
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://dbcontainer:3306/UrlHashingDb
+    ports:
+      - "8080:8080"
+    networks:
+      - urlhashing-mysql-network
+    depends_on:
+      - api-db
+
+  api-db:
+    container_name: dbcontainer
+    build:
+      context: .
+      dockerfile: database.Dockerfile
+    networks:
+      - urlhashing-mysql-network
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=UrlHashingDb
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    ports:
+      - '3306:3306'
+
+networks:
+  urlhashing-mysql-network:
